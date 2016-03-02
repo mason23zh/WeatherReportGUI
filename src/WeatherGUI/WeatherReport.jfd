@@ -1,0 +1,56 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_51" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:17:p, par l:::p {seq {comp label1:::p:84:p, space u:::p, comp cityComboBox:::p:141:p, space s:::p, comp confirmeButton:::p:91:p}, seq l {par l {comp tempLabel:::p:136:p, comp humidityLabel:::p:128:p, comp windChillLabel::l:p:105:p}, space :p:73:p, par l {comp sunriseLabel:::p:122:p, comp sunsetLabel:::p:106:p, comp conditionLabel::l:::x}}}, space ::16:x}}"
+			"$verticalGroup": "par l {seq l {space :p:31:p, par l:::p {comp label1::::35:x, comp cityComboBox::::35:x, comp confirmeButton::t::35:x}, space ::84:x, par b {comp tempLabel::b:p:37:p, comp sunriseLabel::b:p:37:p}, space u:::p, par b {comp humidityLabel::b:p:33:p, comp sunsetLabel::b:p:25:p}, space :p:15:p, par b {comp windChillLabel::b:p:29:p, comp conditionLabel::b:p:23:p}, space :p:30:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"visible": true
+			"title": "Weather Report"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Select City:"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "cityComboBox"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "tempLabel"
+				"text": "Temperature"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "humidityLabel"
+				"text": "Humidity"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "sunriseLabel"
+				"text": "Sunrise"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "sunsetLabel"
+				"text": "Sunset"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "confirmeButton"
+				"text": "Confirm"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "confirmeButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "windChillLabel"
+				"text": "Wind Chill"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "conditionLabel"
+				"text": "Condition"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 395, 345 )
+		} )
+	}
+}

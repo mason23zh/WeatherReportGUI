@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WeatherReport">
+    <output-path>$PROJECT_DIR$/out/artifacts/WeatherReport</output-path>
+    <root id="archive" name="WeatherReportGUI.jar">
+      <element id="module-output" name="WeatherReportGUI" />
+      <element id="library" level="project" name="jgeoplanet-0.1.1" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/WeatherLibrary.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
