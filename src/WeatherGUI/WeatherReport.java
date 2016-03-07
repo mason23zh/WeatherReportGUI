@@ -38,7 +38,6 @@ public class WeatherReport extends JFrame {
     private void confirmeButtonActionPerformed(ActionEvent e) {
         FindWoeid findWoeid = new FindWoeid(cityComboBox.getSelectedItem().toString());
         GetWeatherXML weatherData = new GetWeatherXML(findWoeid.getWoeidCode(), "c");
-        //WeatherData weatherData = new WeatherData(findWoeid.getWoeidCode());
 
 
         //Temperature Label
