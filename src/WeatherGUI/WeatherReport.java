@@ -4,6 +4,8 @@
 
 package WeatherGUI;
 
+import Main_Package.GetWeatherXML;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -15,7 +17,7 @@ import javax.swing.GroupLayout;
 public class WeatherReport extends JFrame {
 
     private String[] cityName = {"Winnipeg", "Vancouver", "Calgary", "Toronto"};
-    private String selectedCity = "";
+
 
 
     public WeatherReport() {
@@ -31,11 +33,12 @@ public class WeatherReport extends JFrame {
      * findWoeid class will be called
      * All relevent label will be filled
      *
-     * @param e
+     * @param  e
      */
     private void confirmeButtonActionPerformed(ActionEvent e) {
         FindWoeid findWoeid = new FindWoeid(cityComboBox.getSelectedItem().toString());
-        WeatherData weatherData = new WeatherData(findWoeid.getWoeidCode());
+        GetWeatherXML weatherData = new GetWeatherXML(findWoeid.getWoeidCode(), "c");
+        //WeatherData weatherData = new WeatherData(findWoeid.getWoeidCode());
 
 
         //Temperature Label
@@ -56,7 +59,7 @@ public class WeatherReport extends JFrame {
                 + weatherData.getTemperatureUnit());
 
         //condition label
-        conditionLabel.setText("Condition: " + weatherData.getCondition());
+        conditionLabel.setText("Condition: " + weatherData.getTextCondition());
 
     }
 
